@@ -1,0 +1,62 @@
+slots:
+  headlinee1:
+    type: unfeaturized
+  headlinee2:
+    type: unfeaturized
+  headlinee3:
+    type: unfeaturized
+  headline:
+    type: unfeaturized
+  reply1:
+    type: unfeaturized
+  reply2:
+    type: unfeaturized
+  reply3:
+    type: unfeaturized
+  messag:
+    type: unfeaturized
+
+entities:
+- headline
+- messag
+
+
+intents:
+  - greet
+  - 再見
+  - 訂購訂單
+  - 幫助
+  - 標題
+  - 標題關鍵字
+  - 回覆
+  - 產品評價
+
+responses:
+  utter_greet:
+  - text: "你好，我是你的對話小助手 Alaina。Alaina不會要求您提供個人資料，請勿在對話中透露任何個人資料。"
+
+  utter_幫助:
+  - text: "試下用簡短嘅句子話我知您想問咩，等我幫您了解下先！"
+
+  utter_訂購訂單:
+  - text: "如您欲購買的商品總值超過 $30,000，請與客戶服務主任聯絡以確保交易順利。"
+
+  utter_再見:
+  - text: "期待下次為你服務"
+
+  utter_標題:
+  - text: "標題產生器，請輸入字句 >> Title:你的標題關鍵字"
+
+  utter_回覆:
+  - text: "請輸入產品評價"
+
+actions:
+- action_suggestheadline
+- action_suggest
+- action_suggestreply
+- action_suggestreply1
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
